@@ -1,7 +1,13 @@
-import Image from "next/image";
+import { Room } from "./Room";
+import { CollaborativeApp } from "./CollaborativeApp";
 
-export default function Home() {
+export default function Page() {
+  console.log(process.env.LIVEBLOCKS_PUBLIC_KEY);
   return (
-  <div>Empty</div>
-  )  
+    <>
+      <Room>
+        <CollaborativeApp />
+      </Room>
+    </>
+  );
 }
